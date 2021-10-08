@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Codificadores</title>
+    <!--STYLES-->
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--ICONS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--Menu-->
+    <nav class="menu">
+      <a href="/index.html" class="menu__logo"><i class="fas fa-code menu__icon"></i>&nbsp;Codificadores</a>
+      <div class="menu__links">
+        <a href="./base64.html">Base64</a>
+        <a href="./aes.html">AES</a>
+      </div>
+      <div class="menu__btn">
+        <i class="fas fa-bars menu__btn"></i>
+      </div>
+    </nav>
+
+    <!--Sidenav-->
+    <nav class="sidenav">
+      <p class="sidenav__title">Menu</p>
+      <div class="sidenav__links">
+        <a href="./base64.html">Base64</a>
+        <a href="./aes.html">AES</a>
+      </div>
+    </nav>
+
+    <!--Information-->
+    <div class="main">
+      <!--Base64 information-->
+      <section class="info">
+        <h2 class="info__heading">Base64</h2>
+        <p class="info__text">
+          Base64 es un algoritmo de codificación que permite transformar cualquier carácter de cualquier
+          idioma en un alfabeto que consta de letras, dígitos y signos latinos. Con esto podemos convertir
+          caracteres especiales como logogramas chinos, emojis e incluso imágenes en una secuencia "legible"
+          (para cualquier ordenador), que se puede guardar y/o transferir en cualquier otro lugar. A menudo se
+          utiliza para transmitir datos binarios por medio de transmisiones que tratan sólo con texto, como
+          para enviar imágenes y archivos adjuntos por correo electrónico.
+          <br />
+          <br />
+          Base64 contiene 64 caracteres para codificar cualquier cadena. Base64 contiene:
+        </p>
+        <ul>
+          <li>Valores numericos [0-9]</li>
+          <li>Alfabeto en min&uacute;sculas [a-z]</li>
+          <li>Alfabeto en may&uacute;sculas [A-Z]</li>
+          <li>Dos caracteres especiales "/" "+", dependiendo del sistema operativo</li>
+        </ul>
+        <a href="./base64.html" class="info__btn"
+          >Base64&nbsp;<i class="fas fa-long-arrow-alt-right btn__icon"></i
+        ></a>
+      </section>
+      <div class="divider"></div>
+      <!--AES information-->
+      <section class="info">
+        <h2 class="info__heading">AES</h2>
+        <p class="info__text">
+          Definido por el Instituto Nacional de Estándares y Tecnología (NIST National Institute of Standards
+          and Technology) bajo la Publicación de Estándares Federales de Procesamiento de Información 197
+          (FIPS PUB 197), el Estándar de cifrado avanzado (AES) especifica un algoritmo criptográfico aprobado
+          por FIPS que se puede utilizar para proteger los datos electrónicos.
+          <br />
+          <br />
+          El algoritmo AES es un cifrado de bloque simétrico que puede cifrar y descifrar datos. El cifrado
+          convierte los datos (texto legible) en un formato ininteligible llamado texto cifrado, mientras que
+          el descifrado convierte este texto cifrado en texto legible original. El algoritmo AES puede usar
+          claves criptográficas de 128, 192 o 256 bits para cifrar y descifrar datos en bloques de 128 bits.
+        </p>
+        <a href="./aes.html" class="info__btn"
+          >AES&nbsp;<i class="fas fa-long-arrow-alt-right btn__icon"></i
+        ></a>
+      </section>
+    </div>
+    <!--JS-->
+    <script src="js/main.js"></script>
+  </body>
+</html>

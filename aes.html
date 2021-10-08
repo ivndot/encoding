@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AES</title>
+    <!--STYLES-->
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--ICONS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--Menu-->
+    <nav class="menu">
+      <a href="/index.html" class="menu__logo"><i class="fas fa-code menu__icon"></i>&nbsp;Codificadores</a>
+      <div class="menu__links">
+        <a href="./base64.html">Base64</a>
+        <a href="./aes.html">AES</a>
+      </div>
+      <div class="menu__btn">
+        <i class="fas fa-bars menu__btn"></i>
+      </div>
+    </nav>
+
+    <!--Sidenav-->
+    <nav class="sidenav">
+      <p class="sidenav__title">Menu</p>
+      <div class="sidenav__links">
+        <a href="./base64.html">Base64</a>
+        <a href="./aes.html">AES</a>
+      </div>
+    </nav>
+
+    <!--Title-->
+    <h1><span class="highlight">AES</span></h1>
+
+    <!--Control-->
+    <div class="control">
+      <p class="control__text">
+        Escribe dentro de la caja de texto la cadena que deseas
+        <span class="cursive">Cifrar/Descifrar</span>. Posteriormente escribe la
+        <span class="cursive">llave</span>
+      </p>
+
+      <select id="typeName" class="control__comboBox">
+        <option value="encrypt">Cifrar</option>
+        <option value="decrypt">Descifrar</option>
+      </select>
+    </div>
+
+    <!--Panel-->
+    <div class="panelAES">
+      <textarea
+        id="inputText"
+        cols="30"
+        rows="10"
+        placeholder="Escribe o pega el texto aqu&iacute;"
+        class="panelAES__textArea"
+      ></textarea>
+
+      <div id="errorInput" class="panelAES__errorBox">
+        <p class="errorBox__msg">Por favor, introduzca un texto.</p>
+      </div>
+
+      <input id="keyText" type="text" placeholder="Llave o Key (Opcional)" class="panelAES__inputKey" />
+      
+      <button id="btnEncryptDecrypt" type="button" class="panelAES__btn">Cifrar&nbsp;<i class="fas fa-long-arrow-alt-right btn__icon"></i></button>
+      
+      <textarea id="outputText" cols="30" rows="10" class="panelAES__textArea" readonly></textarea>
+      
+      <div id="errorOutput" class="panelAES__errorBox">
+        <p class="errorBox__msg">
+          No se pudo completar la acci&oacute;n. Revisa que el <span class="cursive">mensaje</span> y la
+          <span class="cursive">llave</span> sean los correctos.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+    <!--JS-->
+    <script src="js/main.js"></script>
+    <!--CryptoJS-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
+      integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="js/aes.js"></script>
+  </body>
+</html>

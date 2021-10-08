@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Space+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  --accent: #04a777;
+  --primary: #0c1618;
+  --background: #e6e6e9;
+  --text: #1f1f1f;
+  --error: #b82a2a;
+}
+
+body {
+  background-color: var(--background);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 5px;
+  font-size: 70px;
+  font-weight: 100;
+  margin: 50px 0;
+  text-align: center;
+  color: #333333;
+}
+
+.cursive {
+  font-style: italic;
+}
+
+.highlight {
+  padding: 0 5px;
+  background-color: var(--primary);
+  color: white;
+}
+
+.heading {
+  display: inline-block;
+  font-size: 40px;
+  margin: 20px;
+}
+
+/*--------------------------------Menu--------------------------------*/
+
+.menu {
+  width: 100%;
+  height: 80px;
+  background-color: var(--primary);
+  padding: 0 50px;
+  color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  /*flex*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__logo {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: var(--background);
+}
+
+.menu__icon {
+  font-size: 30px;
+  color: var(--accent);
+}
+
+.menu__links {
+  /* background-color: blue; */
+  padding: 10px;
+}
+
+.menu__links > a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  /* background-color: royalblue; */
+  padding: 5px 20px;
+  transition: ease-in-out 0.3s;
+}
+
+.menu__links > a:hover {
+  color: var(--accent);
+}
+
+.menu__btn {
+  display: none;
+}
+
+/*-----------------------------Sidenav--------------------------------*/
+
+.sidenav {
+  z-index: 1;
+  width: 200px;
+  height: 100%;
+  display: block;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: -500px;
+  color: white;
+  padding: 20px 20px;
+  transition: ease-in-out 0.3s;
+}
+
+.sidenav__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  padding: 15px 0;
+}
+
+.sidenav__links > a {
+  display: block;
+  padding: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: ease-in-out 0.5s;
+}
+
+.sidenav__links > a:hover {
+  color: var(--accent);
+}
+
+.sidenav--display {
+  left: 0;
+}
+
+/*--------------------------------Footer-----------------------------*/
+.footer {
+  width: 100%;
+  height: 380px;
+  margin: 60px 0 0 0;
+  background-image: url(../img/wave1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*-----------------------------Responsive--------------------------------*/
+@media only screen and (max-width: 700px) {
+  .menu {
+    padding: 0 30px;
+  }
+
+  .menu__logo {
+    font-size: 14px;
+  }
+
+  .menu__icon {
+    font-size: 17px;
+  }
+
+  .menu__links {
+    display: none;
+  }
+
+  .menu__btn {
+    display: block;
+    font-size: 17px;
+  }
+
+  .panelBase64 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .panelBase64__input {
+    margin: 0 0 13px 0;
+  }
+
+  .panelBase64__output {
+    margin: 13px 0 0 0;
+  }
+
+  .panelAES__textArea,
+  .panelAES__inputKey,
+  .panelAES__btn,
+  .panelAES__errorBox{
+    width: 100%;
+  }
+
+  .footer {
+    background-size: cover;
+    background-position: center;
+  }
+}
