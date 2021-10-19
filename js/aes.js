@@ -20,7 +20,7 @@ typeAction.addEventListener("change", () => {
   inputText.value = "";
   keyText.value = "";
   outputText.value = "";
-  //execute the function to change la label of the button
+  //execute the function to change the label of the button
   changeLabelButton();
 });
 
@@ -42,27 +42,23 @@ btnEncryption.addEventListener("click", () => {
 /*------------------------------------------------------------------------ */
 
 /**
- *
+ * Change the label of AES button
  */
 const changeLabelButton = () => {
   const action = typeAction.value;
-  let word = "";
-  if (action === "encrypt") {
-    word = "Cifrar";
-  } else {
-    word = "Descifrar";
-  }
+  let word = "Descifrar";
 
-  btnEncryption.innerHTML = word;
+  if (action === "encrypt") word = "Cifrar";
+
+  btnEncryption.innerHTML = `${word} <i class="fas fa-long-arrow-alt-right"></i>`;
 };
 
-
 /**
- *
- * @param {*} input
- * @param {*} key
- * @param {*} type
- * @returns
+ * Encrypt/Decrypt with AES algorithm
+ * @param {string} input String to convert
+ * @param {string} key The key of AES algorithm
+ * @param {string} type Action to do (Encrypt/Decrypt)
+ * @returns {string}
  */
 const encryptDecryptAES = (input, key, type) => {
   let res = "";
@@ -79,11 +75,10 @@ const encryptDecryptAES = (input, key, type) => {
   return res;
 };
 
-
 /**
- *
- * @param {*} input
- * @returns
+ * Check if the input is empty, returns true if it is 
+ * @param {string} input String to be validated
+ * @returns {boolean}
  */
 const isInputEmpty = (input) => {
   if (input === null || input === "") {
@@ -101,11 +96,10 @@ const isInputEmpty = (input) => {
   }
 };
 
-
 /**
- * 
- * @param {*} result 
- * @returns 
+ * Check if there is a result error, returns true if it is
+ * @param {string} result Result of the EncryptDecryptAES function
+ * @returns {boolean}
  */
 const isResultError = (result) => {
   if (result === null || result === "") {

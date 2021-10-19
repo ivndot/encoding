@@ -45,26 +45,22 @@ btnEncoding.addEventListener("click", () => {
 /*--------------------------------------------------------------------------*/
 
 /**
- *
- * @param {*} comboBox
+ * Change the label of the base64 button
  */
 const changeLabelButton = () => {
   const action = typeAction.value;
-  let word = "";
-  if (action === "encode") {
-    word = "Codificar";
-  } else {
-    word = "Decodificar";
-  }
+  let word = "Decodificar";
 
-  btnEncodeDecode.innerHTML = word + '<i class="fas fa-long-arrow-alt-right"></i>';
+  if (action === "encode") word = "Codificar";
+
+  btnEncodeDecode.innerHTML = `${word} <i class="fas fa-long-arrow-alt-right"></i>`;
 };
 
 /**
- *
- * @param {array} input
- * @param {data} type
- * @returns
+ * Encode or decode a string in base64
+ * @param {string} input String to convert
+ * @param {string} type Action to do (encode/decode)
+ * @returns {array}
  */
 const encodeDecodeBase64 = (input, type) => {
   //split input when get line break
